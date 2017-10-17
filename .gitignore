@@ -3,7 +3,7 @@ wp-config.php
 .htaccess
 
 # Ignore the wp-content directory
-/wp-content/
+/wp-content/*
 
 # Don’t ignore plugins dir, but ignore everything inside
 !/wp-content/plugins
