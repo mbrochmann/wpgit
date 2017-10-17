@@ -1,0 +1,9 @@
+To start OS X server:
+
+sudo apachectl start
+
+
+To start mySQL:
+
+/usr/local/bin/mysql.server  start
+
