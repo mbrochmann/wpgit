@@ -1,0 +1,11 @@
+Doing the wordpress tutorial here:
+
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hosting-wordpress.html
+
+Just to see a different method.
+
+Eventually, will sync the databases (or something like that).
+
+Also, want to figure out the "bare-bones" way to store ONLY the parts of wordpress that make my configuration unique 
+(i.e. the parts necessary to restore wordpress if my site is wiped out)
+

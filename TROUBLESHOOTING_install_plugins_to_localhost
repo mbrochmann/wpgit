@@ -1,0 +1,40 @@
+Attempting to install the Password Protected plugin to localhost (avoiding using FTP)
+
+
+Added the following to wp-config.php:
+described at https://wpfortune.com/blog/wordpress-tips-tricks/install-plugins-localhost/
+
+/* Added to install plugins on localhost */
+define('FS_METHOD', 'direct');
+
+Set permissions to 777 on wp-content
+
+However, I get the following error in the GUI:
+Installation failed: Could not create directory.
+
+Note, a lot of related files show up in:
+wp-content/upgrade/password-protected.2.0.3-T4I7pr/
+(created by user _www)
+
+"Installation failed" found in:
+./wp-admin/includes/class-wp-automatic-updater.php
+
+"Could not create directory" found in:
+./wp-admin/includes/class-wp-upgrader.php
+
+Then, it occured to me to try:
+
+chmod 777 wp-content/plugins
+
+and that did the trick. "Password Protected" plugin successfully installed.
+
+I would prefer not to have to set the permissions to 777.
+I could set it to 775, and add _www to group "staff" (current group of all the wordpress stuff)
+
+Instead, as recommended here: https://coderwall.com/p/gl_grw/make-a-directory-writable-by-apache-in-mac-os-x-maverick
+
+I changed wp-content and wp-content/plugins to 775 and changed the owner to _www. 
+
+The group is still staff, so since I added group write access, I can still modify those files myself.
+
+
